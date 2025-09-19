@@ -87,7 +87,7 @@
         th[colspan="5"] {
             padding-bottom: 8px;
         }
-        @media (max-width: 500px) {
+        @media (max-width: 600px) {
             table {
                 min-width: 95vw;
                 padding: 10px 2vw;
@@ -101,6 +101,12 @@
                 font-size: 1.2rem;
                 padding: 10px 4px;
             }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            #sidebar {
+                display: none;
+            }
         }
         #sidebar {
             position: fixed;
@@ -111,10 +117,43 @@
             background: rgba(34, 40, 49, 0.9);
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             gap: 20px;
             box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+            padding-top: 50px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            font-size: 1rem;
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        .close-btn:hover {
+            color: #ff4f81;
+        }
+        #toggle-sidebar {
+            position: fixed;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(34, 40, 49, 0.9);
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: none;
+        }
+        #toggle-sidebar:hover {
+            background: rgba(34, 40, 49, 1);
         }
         .sidebar-button {
             width: 120px;
@@ -370,6 +409,7 @@
         </table>
     </main>
     <aside id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
         <h3 style="align-self: center; color: white; margin: 0;">Code By:</h3>
         <a href="https://www.linkedin.com/in/otaviophellipe" target="_blank" title="LinkedIn">
             <button class="sidebar-button">
@@ -386,5 +426,19 @@
             </button>
         </a>
     </aside>
+    <button id="toggle-sidebar" onclick="toggleSidebar()">☰</button>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const toggleBtn = document.getElementById('toggle-sidebar');
+            if (sidebar.style.display === 'none') {
+                sidebar.style.display = 'flex';
+                toggleBtn.style.display = 'none';
+            } else {
+                sidebar.style.display = 'none';
+                toggleBtn.style.display = 'block';
+            }
+        }
+    </script>
 </body>
-</html></div>
+</html>
