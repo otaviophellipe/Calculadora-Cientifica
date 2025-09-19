@@ -47,7 +47,7 @@ Lançamento: 19/09/2025
 
 ## ⚙️ Como Executar o Projeto/Ver em Ação:
 
-1 - Entre no link: https://otaviophellipe.github.io/Calculadora-Cientifica/index.html
+1 - Entre no link: https://otaviophellipe.github.io/Calculadora-Cientifica/calculadora.html
 
 ou
 
