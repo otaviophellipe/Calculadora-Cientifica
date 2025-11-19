@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#! p3
 """
 Build script to compile SASS and TypeScript files for the calculator project.
 Requires: sass, typescript (install via npm if needed)
@@ -25,7 +25,7 @@ def main():
     """Main build function."""
     print("Starting build process...")
 
-    # Check if sass is installed
+    # checa sass
     try:
         subprocess.run(["sass", "--version"], check=True, capture_output=True)
         sass_available = True
@@ -37,7 +37,7 @@ def main():
         else:
             sass_available = True
 
-    # Check if tsc is installed
+    # checa instalações tsc
     try:
         subprocess.run(["tsc", "--version"], check=True, capture_output=True)
         tsc_available = True
@@ -49,14 +49,14 @@ def main():
         else:
             tsc_available = True
 
-    # Compile SASS
+    # comp sass
     if sass_available and os.path.exists("style.scss"):
         if not run_command("sass style.scss style.css", "Compiling SASS to CSS"):
             print("SASS compilation failed.")
         else:
             print("SASS compiled successfully.")
 
-    # Compile TypeScript
+    # comp ts
     if tsc_available and os.path.exists("logic.ts"):
         if not run_command("tsc logic.ts --outFile logic.js --target ES2015", "Compiling TypeScript to JavaScript"):
             print("TypeScript compilation failed.")
