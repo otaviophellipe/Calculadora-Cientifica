@@ -47,8 +47,7 @@ Veja a [documentação de testes](https://facebook.github.io/create-react-app/do
 
 ## 🔎 Recursos
 
-- Design responsivo
-- Operações básicas de calculadora
+- Implementação React
 - Interface intuitiva
 
 ## 📚 Saiba Mais
