@@ -1,0 +1,55 @@
+{
+  "calculator": {
+    "title": "Calculadora Científica",
+    "display": {
+      "placeholder": "0",
+      "maxLength": 50
+    },
+    "buttons": {
+      "memory": {
+        "clear": "MC",
+        "read": "MR",
+        "add": "M+",
+        "subtract": "M-",
+        "save": "MS"
+      },
+      "scientific": {
+        "square": "x^2",
+        "tenPower": "10^x",
+        "sine": "sin",
+        "cosine": "cos",
+        "tangent": "tan",
+        "cube": "x^3",
+        "inverse": "x^-1",
+        "sqrt": "sqrt",
+        "log": "log",
+        "naturalLog": "ln",
+        "percentage": "e",
+        "pi": "π",
+        "factorial": "n!",
+        "toggleSign": "(-)",
+        "openParen": "(",
+        "closeParen": ")",
+        "dot": ".",
+        "equals": "="
+      },
+      "numbers": ["7", "8", "9", "4", "5", "6", "1", "2", "3", "0"],
+      "operators": ["+", "-", "*", "/"]
+    },
+    "themes": {
+      "default": {
+        "background": "#232526",
+        "table": "#222831",
+        "display": "#393e46",
+        "text": "#fff",
+        "buttons": {
+          "grey": "#6c757d",
+          "black": "#393e46",
+          "blue": "#00adb5",
+          "green": "#21bf73",
+          "red": "#ff2e63"
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,6 @@
+<?php
+// PHP version of the calculator - requires a PHP server to run
+?>
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -7,17 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <script src="logic.js"></script>
-    <script>
-        // Load JSON config on page load
-        fetch('config.json')
-            .then(response => response.json())
-            .then(config => {
-                console.log('Config loaded:', config);
-                // Could use config to dynamically update UI elements
-            })
-            .catch(error => console.log('Config not loaded:', error));
-    </script>
-    <title>Calculadora Científica</title>
+    <title>Calculadora Científica - PHP</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -190,7 +183,7 @@
 <body>
     <header>
         <h1 style="font-family: 'Orbitron', 'Consolas', 'Courier New', monospace; text-align: center; letter-spacing: 2px; color: #fff; text-shadow: 0 2px 8px #0006;">
-            Calculadora científica
+            Calculadora científica - PHP
         </h1>
     </header>
     <main>
@@ -217,7 +210,7 @@
                     </div>
                 </td>
                 <td>
-                    <div class="displaytable-cell" id="bMSub"></div>
+                    <div class="displaytable-cell" id="bMSub">
                         <button class="button greybutton" type="button" onclick="calculadora.subtractFromMemory()">M-</button>
                     </div>
                 </td>
@@ -234,7 +227,7 @@
                     </div>
                 </td>
                 <td>
-                    <div class="displaytable-cell" id="bNthPowerOfTenOr"></div>
+                    <div class="displaytable-cell" id="bNthPowerOfTenOr">
                         <button class="button blackbutton" type="button" onclick="calculadora.nthTenPower()">10^x</button>
                     </div>
                 </td>
@@ -244,7 +237,7 @@
                     </div>
                 </td>
                 <td>
-                    <div class="displaytable-cell" id="bCosine"></div>
+                    <div class="displaytable-cell" id="bCosine">
                         <button class="button blackbutton" type="button" onclick="calculadora.writeMathFunction('cos(')">cos</button>
                     </div>
                 </td>
@@ -256,12 +249,12 @@
             </tr>
             <tr>
                 <td>
-                    <div class="displaytable-cell" id="bCube"></div>
+                    <div class="displaytable-cell" id="bCube">
                         <button class="button blackbutton" type="button" onclick="calculadora.cube()">x^3</button>
                     </div>
                 </td>
                 <td>
-                    <div class="displaytable-cell" id="bInverseNumber"></div>
+                    <div class="displaytable-cell" id="bInverseNumber">
                         <button class="button blackbutton" type="button" onclick="calculadora.inverseNumber()">x^-1</button>
                     </div>
                 </td>
@@ -271,24 +264,24 @@
                     </div>
                 </td>
                 <td>
-                    <div class="displaytable-cell" id="bLogOr"></div>
+                    <div class="displaytable-cell" id="bLogOr">
                         <button class="button blackbutton" type="button" onclick="calculadora.writeMathFunction('log(')">log</button>
                     </div>
                 </td>
                 <td>
-                    <div class="displaytable-cell" id="bNaturalLog"></div>
+                    <div class="displaytable-cell" id="bNaturalLog">
                         <button class="button blackbutton" type="button" onclick="calculadora.writeMathFunction('ln(')">ln</button>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <div class="displaytable-cell" id="bPercentage"></div>
-                        <button class="button greenbutton type="button" onclick="calculadora.writeMathFunction('e')">e</button>
+                    <div class="displaytable-cell" id="bPercentage">
+                        <button class="button greenbutton" type="button" onclick="calculadora.writeMathFunction('e')">e</button>
                     </div>
                 </td>
                 <td>
-                    <div class="displaytable-cell" id="bClearDisplayCE"></div>
+                    <div class="displaytable-cell" id="bClearDisplayCE">
                         <button class="button redbutton" type="button" onclick="calculadora.clearDisplay()">CE</button>
                     </div>
                 </td>
@@ -315,7 +308,7 @@
                     </div>
                 </td>
                 <td>
-                    <div class="displaytable-cell" id="bSeven"></div>
+                    <div class="displaytable-cell" id="bSeven">
                         <button class="button bluebutton" type="button" onclick="calculadora.writeToDisplay('7')">7</button>
                     </div>
                 </td>
@@ -452,3 +445,7 @@
     </script>
 </body>
 </html>
+<?php
+// PHP server-side logic could be added here if needed
+echo "<!-- This is a PHP file, served by a PHP server -->";
+?>
