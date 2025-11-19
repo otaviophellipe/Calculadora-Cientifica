@@ -1,5 +1,5 @@
 <?php
-// PHP version of the calculator - requires a PHP server to run
+// versão do php - sem php nao roda
 ?>
 <!DOCTYPE html>
 <html lang="pt">
