@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <script src="logic.js"></script>
     <script>
-        // Load JSON config on page load
+        // JSON
         fetch('config.json')
             .then(response => response.json())
             .then(config => {
                 console.log('Config loaded:', config);
-                // Could use config to dynamically update UI elements
+                // UI
             })
             .catch(error => console.log('Config not loaded:', error));
     </script>
