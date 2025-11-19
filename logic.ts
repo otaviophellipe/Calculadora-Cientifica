@@ -138,13 +138,6 @@ class CalculadoraCientifica extends CalculadoraBasica {
         };
     }
 
-    /**
-     * Escreve nova entrada do usuário dos botões da calculadora na
-     * tela.
-     *
-     * @param {String} data Os dados a serem exibidos na tela.
-     * Dado por um clique de botão do usuário.
-     */
     override writeToDisplay(data: string): void {
         const displayBox = document.getElementById("displayBox") as HTMLInputElement;
         if (displayBox.value == "Erro de Sintaxe") {
@@ -155,12 +148,7 @@ class CalculadoraCientifica extends CalculadoraBasica {
         this.inputList.push(data);
     }
 
-    /**
-     * Escreve o operador clicado pelo usuário na tela.
-     *
-     * @param {String} operator Uma string representando o operador
-     * que foi clicado pelo usuário.
-     */
+
     override writeOperatorToDisplay(operator: string): void {
         const displayBox = document.getElementById("displayBox") as HTMLInputElement;
         if (displayBox.value == "Erro de Sintaxe") {
@@ -171,21 +159,7 @@ class CalculadoraCientifica extends CalculadoraBasica {
         this.inputList.push(operator);
     }
 
-    /**
-     * Resolve a operação atualmente exibida pela calculadora.
-     * Se a sintaxe não estiver correta para uma expressão aritmética
-     * bem formada, o usuário terá um erro solicitado e a tela
-     * será definida como zero. Devido à complexidade da verificação
-     * de expressão regular. Esta tarefa de corresponder ao conjunto
-     * inteiro de operações possíveis precisaria de uma gramática
-     * livre de contexto ou alguma outra técnica.
-     *
-     * ~Tirado do StackOverflow~
-     * Você não pode encontrar parênteses correspondentes com expressões
-     * regulares. Esta é uma consequência do lema de bombeamento para
-     * linguagens regulares.
-     * ~Tirado do StackOverflow~
-     */
+
     override solveOperation(): number {
         let result: number | string = 0;
         try {
@@ -313,11 +287,11 @@ class CalculadoraCientifica extends CalculadoraBasica {
 
 const calculadora = new CalculadoraCientifica();
 
-// Load config if available
+// config
 fetch('config.json')
     .then(response => response.json())
     .then((config: Config) => {
         console.log('Config loaded:', config);
-        // Could use config to customize calculator behavior
+        // custumiza calculos
     })
     .catch(error => console.log('Config not loaded:', error));
