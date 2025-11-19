@@ -9,6 +9,8 @@ Este é um projeto de calculadora desenvolvido com React, utilizando o Create Re
 
 ## 🌐 Tecnologias Utilizadas
 - React
+- PHP
+- JSON
 - JavaScript (ES6+)
 - TypeScript
 - HTML
